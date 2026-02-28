@@ -1,12 +1,14 @@
 from flask import Blueprint, url_for
 from werkzeug.utils import redirect
 
-bp = Blueprint('main', __name__, url_prefix='/')
+bp = Blueprint("main", __name__, url_prefix="/")
 
-@bp.route('/hello')
-def hello():
-    return 'Hello World'
 
-@bp.route('/')
+@bp.route("/hello")
+def hello_yongBoard():
+    return "Hello World"
+
+
+@bp.route("/")
 def index():
-    return redirect(url_for('question._list'))
+    return redirect(url_for("question._list"))
